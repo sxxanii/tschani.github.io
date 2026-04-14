@@ -1,68 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Quantum Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T'Schani Falwasser | Quantum Portfolio</title>
     <style>
-        body {
-            font-family: Arial;
-            background-color: #0f172a;
-            color: white;
-            margin: 40px;
+        * {
+            box-sizing: border-box;
         }
 
-        h1 { 
-            color: #38bdf8; 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #111827);
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #67e8f9;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #7dd3fc;
+            margin-bottom: 20px;
+            border-left: 4px solid #22d3ee;
+            padding-left: 12px;
         }
 
         .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(103, 232, 249, 0.15);
+            border-radius: 18px;
+            padding: 30px;
+            margin-top: 25px;
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.08);
+            backdrop-filter: blur(6px);
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
+        .project-block {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        img {
+        .project-block:first-of-type {
+            border-top: none;
+            padding-top: 0;
             margin-top: 10px;
-            margin-bottom: 15px;
-            border-radius: 8px;
+        }
+
+        h2, h3 {
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #67e8f9;
+        }
+
+        h3 {
+            color: #bae6fd;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #dbeafe;
+        }
+
+        .image-box {
+            margin: 18px 0;
+            text-align: center;
+        }
+
+        .image-box img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 14px;
+            border: 1px solid rgba(103, 232, 249, 0.2);
+            box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #06b6d4, #3b82f6);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .card {
+                padding: 22px;
+            }
         }
     </style>
 </head>
-
 <body>
 
-<h1>T'Schani Falwasser</h1>
-<p>Physics Student | Quantum Computing Interest</p>
+    <div class="hero">
+        <h1>T'Schani Falwasser</h1>
+        <p>
+            QUT Physics Student exploring quantum computing, simulation,
+            and emerging computational approaches to physical systems.
+        </p>
+    </div>
 
-<div class="card">
-    <h2>Quantum Circuit Simulation</h2>
+    <div class="container">
 
-    <h3>Superposition</h3>
-    <p>
-        A Hadamard gate was applied to simulate quantum superposition,
-        producing an approximately equal probability of measuring 0 and 1.
-    </p>
-    <img src="Figure_1_superposition.png" width="300">
-    <p><a href="superposition.py">View Code</a></p>
+        <div class="card">
+            <h2 class="section-title">About</h2>
+            <p>
+                I am a physics student with a growing interest in quantum computing,
+                modelling, and computational physics. This portfolio showcases my
+                introductory work using IBM Quantum and Qiskit to simulate core
+                quantum phenomena and interpret their measurement outcomes.
+            </p>
+        </div>
 
-    <h3>Entanglement</h3>
-    <p>
-        A CNOT gate was used to entangle two qubits, resulting in correlated
-        measurement outcomes dominated by 00 and 11 states.
-    </p>
-    <img src="Figure_1_entanglement.png" width="300">
-    <p><a href="entanglement.py">View Code</a></p>
+        <div class="card">
+            <h2 class="section-title">Quantum Circuit Simulation</h2>
+            <p>
+                This project explores two foundational concepts in quantum computing:
+                superposition and entanglement. Using IBM Quantum tools and Qiskit,
+                I simulated quantum circuits and analysed their output through
+                measurement histograms.
+            </p>
 
-</div>
+            <div class="project-block">
+                <h3>Superposition</h3>
+                <p>
+                    A Hadamard gate was applied to a single qubit to place it in a
+                    superposition state, producing an approximately equal probability
+                    of measuring 0 and 1.
+                </p>
+
+                <div class="image-box">
+                    <img src="Figure_1_superposition.png" alt="Superposition histogram">
+                </div>
+
+                <a class="button" href="superposition.py">View Superposition Code</a>
+            </div>
+
+            <div class="project-block">
+                <h3>Entanglement</h3>
+                <p>
+                    A CNOT gate was used to entangle two qubits, resulting in
+                    correlated measurement outcomes dominated by the 00 and 11 states.
+                    This demonstrates a basic example of non-classical quantum correlation.
+                </p>
+
+                <div class="image-box">
+                    <img src="Figure_1_entanglement.png" alt="Entanglement histogram">
+                </div>
+
+                <a class="button" href="entanglement.py">View Entanglement Code</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Built as part of my early exploration into quantum computing and simulation.
+    </div>
 
 </body>
 </html>
